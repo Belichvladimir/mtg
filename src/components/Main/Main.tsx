@@ -3,6 +3,9 @@ import { Layout, Table, TableColumnsType } from 'antd';
 import { withRouter } from '../../router/WithRouter';
 import { connect } from 'react-redux';
 
+import { cnMain } from './Main.classname';
+import './Main.css';
+
 const { Content } = Layout;
 
 interface DataType {
@@ -30,9 +33,7 @@ class Main extends Component<any, any> {
   ];
   render() {
     return (
-      <Content
-        style={{ flexGrow: '1', padding: '0 48px', textAlign: 'center' }}
-      >
+      <Content className={cnMain()}>
         <Table
           columns={this.columns}
           dataSource={this.props.items}

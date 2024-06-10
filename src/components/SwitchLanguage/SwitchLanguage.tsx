@@ -3,6 +3,9 @@ import { Select } from 'antd';
 import { connect } from 'react-redux';
 import { switchLanguage } from '../../store/reviewSlice';
 
+import { cnSwitchLanguage } from './SwitchLanguage.classname';
+import './SwitchLanguage.classname';
+
 class SwitchLanguage extends Component<any, any> {
   handleChange = (value: string) => {
     this.props.switchLanguage(value);
@@ -11,7 +14,7 @@ class SwitchLanguage extends Component<any, any> {
     return (
       <Select
         defaultValue="RU"
-        style={{ width: 120 }}
+        className={cnSwitchLanguage()}
         onChange={this.handleChange}
         options={[
           { value: 'ru', label: 'RU' },

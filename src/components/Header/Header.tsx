@@ -3,21 +3,17 @@ import { Layout, Typography } from 'antd';
 import SwitchLanguage from '../SwitchLanguage/SwitchLanguage';
 import CurrentDate from '../CurrentDate/CurrentDate';
 
+import { cnHeader } from './Header.classname';
+import './Header.css';
+
 const { Header } = Layout;
 const { Title } = Typography;
 
 export default class Head extends Component {
   render() {
     return (
-      <Header
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          gap: '20px',
-        }}
-      >
-        <Title level={2} style={{ color: 'white', flexGrow: '1' }}>
+      <Header className={cnHeader()}>
+        <Title level={2} className={cnHeader('Title')}>
           Здесь будет Ваш ЛОГОТИП
         </Title>
         <SwitchLanguage />

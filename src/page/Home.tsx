@@ -9,6 +9,9 @@ import { withRouter } from '../router/WithRouter';
 import { setReview } from '../store/reviewSlice';
 import { REVIEW_PER_PAGE } from '../utils/consts';
 
+import { cnHome } from './Home.classname';
+import './Home.css';
+
 class Home extends Component<any, any> {
   currentPage = this.props.page;
   begin = (this.currentPage - 1) * REVIEW_PER_PAGE;
@@ -38,11 +41,10 @@ class Home extends Component<any, any> {
   };
   render() {
     return (
-      <Layout style={{ height: '100vh' }}>
+      <Layout className={cnHome()}>
         <Head />
         <Main items={this.props.review.items?.slice(this.begin, this.end)} />
-        <Pagination
-          style={{ margin: '20px auto' }}
+        <Pagination className={cnHome('Pagination')}
           onChange={this.changePage}
           defaultCurrent={this.props.page}
           total={this.props.review.count}

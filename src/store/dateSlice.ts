@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-interface DateState {
+export interface DateState {
   value: string;
 }
 

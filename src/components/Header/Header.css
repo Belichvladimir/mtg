@@ -1,0 +1,10 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+.Header .Header-Title {
+    color: white;
+    flex-grow: 1;
+}

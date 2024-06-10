@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setDate } from '../../store/dateSlice';
 
+import { cnCurrentDate } from './CurrentDate.classname';
+import './CurrentDate.css';
+
 type Props = any;
 
 class CurrentDate extends Component<Props> {
@@ -22,12 +25,12 @@ class CurrentDate extends Component<Props> {
   }
   render() {
     return (
-      <span style={{ color: 'white', width: '10%' }}>{this.props.date}</span>
+      <span className={cnCurrentDate()}>{this.props.date}</span>
     );
   }
 }
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state:any) => ({
   date: state.date.value,
 });
 

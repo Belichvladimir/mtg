@@ -1,0 +1,1 @@
+export const REVIEW_PER_PAGE = 10;
